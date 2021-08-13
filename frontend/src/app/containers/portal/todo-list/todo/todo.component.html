@@ -3,8 +3,33 @@
     (change)="updateTodo()"
     [(ngModel)]="todoData.finished">
   </mat-checkbox>
-  <div>
-    {{todoData.title}}
+  <div class="todo__title">
+    <div
+      *ngIf="!editTitle"
+      class="todo__title__text"
+         (click)="showInput()">
+      {{todoData.title}}
+    </div>
+    <div
+      *ngIf="editTitle"
+      class="todo__title__input">
+      <form
+          #todoForm="ngForm">
+        <mat-form-field
+          appearance="standard"
+          [hideRequiredMarker]="true">
+          <mat-label>Title</mat-label>
+          <input
+              #title="ngModel"
+              matInput
+              id="title"
+              type="text"
+              name="title"
+              (keyup.enter)="todoForm.valid ? updateTodo() && hideInput(): null"
+              [(ngModel)]="todoData.title">
+        </mat-form-field>
+      </form>
+    </div>
   </div>
   <div>
     {{todoData.create_date | date: 'short'}}

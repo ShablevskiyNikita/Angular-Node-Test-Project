@@ -14,7 +14,7 @@
             id="title"
             type="text"
             name="title"
-            (keyup.enter)="todoForm.valid ? createTodo(todoForm): null"
+            (keyup.enter)="title.value.length > 0 ? createTodo(todoForm): null"
             [(ngModel)]="tempTodo.title">
       </mat-form-field>
     </form>

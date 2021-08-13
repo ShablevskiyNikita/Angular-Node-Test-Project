@@ -11,6 +11,16 @@ export class TodoComponent {
   @Output() todoDataChange = new EventEmitter<TodoDto>();
   @Output() deleteData = new EventEmitter<TodoDto>();
 
+  editTitle = false;
+
+  showInput(): void {
+    this.editTitle = true;
+  }
+
+  hideInput(): void {
+    this.editTitle = false;
+  }
+
   updateTodo(): void {
     this.todoDataChange.emit(this.todoData);
   }
