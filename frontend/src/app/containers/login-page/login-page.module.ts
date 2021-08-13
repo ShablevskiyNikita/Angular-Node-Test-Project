@@ -5,11 +5,13 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '@core/auth/services/auth.service';
 import { LoginPageRouting } from './login-page.routing';
 import { LoginPageComponent } from './login-page.component';
+import { MaterialModule } from '@core/material/material.module';
 
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
+    MaterialModule,
     LoginPageRouting
   ],
   declarations: [ LoginPageComponent ],

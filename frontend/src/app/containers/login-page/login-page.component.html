@@ -1,11 +1,49 @@
 <div class="login-container">
   <h5>Login page</h5>
-  <form class="login-container__form">
-    <input
-      class="login-container__form__input"
-    >
-    <input
-      class="login-container__form__input"
-    >
+  <form
+      #loginForm="ngForm"
+      class="login-page-container__form"
+      (submit)="checkForm(loginForm) ? loginToAdminPage() : null">
+    <mat-form-field
+      appearance="standard"
+      class="login-container__form__input-field"
+      [hideRequiredMarker]="true">
+      <mat-label>Email</mat-label>
+      <input
+          #mail="ngModel"
+          matInput
+          id="mail"
+          type="email"
+          name="mail"
+          required
+          [pattern]="mailPattern"
+          [class.error]="mail.invalid && (mail.dirty || mail.touched)"
+          [(ngModel)]="loginData.email">
+      <mat-error *ngIf="mail.invalid && (mail.dirty || mail.touched)">
+        <span *ngIf="mail.errors.required">Required field</span>
+        <span *ngIf="mail.errors?.pattern">Wrong email format</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field
+      appearance="standard"
+      class="login-page-container__form__input-field"
+      [hideRequiredMarker]="true">
+      <mat-label>Password</mat-label>
+      <input
+          #password="ngModel"
+          matInput
+          id="password"
+          name="password"
+          required
+          [(ngModel)]="loginData.password">
+      <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+        <span *ngIf="password.errors.required">Required field</span>
+      </mat-error>
+    </mat-form-field>
+    <button
+      type="submit"
+      class="button login-container__form__button">
+      Login
+    </button>
   </form>
 </div>

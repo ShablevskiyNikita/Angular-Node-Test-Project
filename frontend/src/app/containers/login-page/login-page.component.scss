@@ -1,0 +1,33 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 340px;
+  margin: 0 auto;
+  min-height: 100%;
+
+  &__logo {
+    display: block;
+    width: 350px;
+    margin: clamp(20px, calc(-12px + 6.6667vh), 60px) auto clamp(20px, calc(-60px + 16.6667vh), 130px);
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: black;
+    text-align: center;
+  }
+
+  &__form {
+    display: block;
+    width: 88%;
+    margin: 25px auto 0;
+
+    &__button {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}

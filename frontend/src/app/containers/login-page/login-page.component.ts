@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { LoginDto } from '@core/auth/dto/login.dto';
 import { AuthService } from '@core/auth/services/auth.service';
@@ -20,5 +21,10 @@ export class LoginPageComponent {
       .subscribe(authData => {
 
       });
+  }
+
+  checkForm(personalUserInfoForm: NgForm): boolean {
+    personalUserInfoForm.control.markAllAsTouched();
+    return personalUserInfoForm.valid;
   }
 }
