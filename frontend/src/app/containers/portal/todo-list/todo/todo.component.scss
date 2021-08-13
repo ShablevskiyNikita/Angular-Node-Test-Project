@@ -6,6 +6,8 @@
   &__title {
     &__text {
       cursor: pointer;
+      white-space: pre-line;
+      max-width: 200px;
 
       &.finished {
         color: green;
