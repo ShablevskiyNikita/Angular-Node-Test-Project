@@ -1,8 +1,15 @@
 <div class="todo">
-  <mat-checkbox [(ngModel)]="todoData.finished"></mat-checkbox>
-  <div>{{todoData.title}}</div>
-  <div>{{todoData.create_date | date: 'short'}}</div>
-  <button  mat-icon-button aria-label="Delete icon">
+  <mat-checkbox
+    (ngModelChange)="updateTodo()"
+    [(ngModel)]="todoData.finished">
+  </mat-checkbox>
+  <div>
+    {{todoData.title}}
+  </div>
+  <div>
+    {{todoData.create_date | date: 'short'}}
+  </div>
+  <button mat-icon-button aria-label="Delete icon">
     <mat-icon>delete</mat-icon>
   </button>
 </div>

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TodoDto } from '@rest/todo/todo.dto';
 
 @Component({
@@ -9,4 +9,8 @@ import { TodoDto } from '@rest/todo/todo.dto';
 export class TodoComponent {
   @Input() todoData: TodoDto;
   @Output() todoDataChange = new EventEmitter<TodoDto>();
+
+  updateTodo(): void {
+    this.todoDataChange.emit(this.todoData);
+  }
 }

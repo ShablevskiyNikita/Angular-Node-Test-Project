@@ -109,9 +109,7 @@ export class HttpService extends HttpClient {
     if (errorMessage) {
       this.notification.error(errorMessage);
     }
-    if (errorResponse.status === 404) {
-      this.router.navigateByUrl('/not-found-page');
-    }
+
     return throwError(errorResponse);
   }
 }

@@ -24,7 +24,7 @@ export class TodoService {
   }
 
   updateDto(data: TodoDto): Observable<TodoDto> {
-    return this.http.update<TodoDto>(`${this.path}`, data, TodoDto, {
+    return this.http.update<TodoDto>(`${this.path}/${data._id}`, data, TodoDto, {
       200: 'Todo successfully updated',
       201: 'Todo successfully updated',
       400: 'Wrong todo data',

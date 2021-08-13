@@ -20,7 +20,9 @@
     </form>
   </div>
   <div class="todo-list-container__list">
-    <app-todo *ngFor="let todo of todos" [todoData]="todo">
+    <app-todo *ngFor="let todo of todos"
+              [todoData]="todo"
+              (todoDataChange)="updateTodo($event)">
     </app-todo>
   </div>
 </section>
