@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
+
+import { HttpModule } from '@core/http/http.module';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { HttpModule } from './core/http/http.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { HttpModule } from './core/http/http.module';
       maxOpened: 1,
       easeTime: 500
     }),
+    AppRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],
