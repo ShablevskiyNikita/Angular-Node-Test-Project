@@ -16,8 +16,6 @@ import { LoginPageComponent } from './login-page.component';
   ],
   declarations: [ LoginPageComponent ],
   exports: [ LoginPageComponent ],
-  providers: [
-    AuthService
-  ]
+  providers: [ AuthService ]
 })
 export class LoginPageModule {}
