@@ -7,6 +7,8 @@ import cookieParser from 'cookie-parser';
 import methodOverride from 'method-override';
 import { CommonRoute } from './core/classes/common.route';
 
+import { errorMiddleware } from './core/middleware/error.middleware';
+
 export class App {
   public app: express.Application;
 
@@ -16,6 +18,7 @@ export class App {
     this.connectToTheDatabase();
     this.initializeMiddlewares();
     this.initializeRoutes(controllers);
+    this.initializeErrorHandling();
   }
 
   public listen(): void {
@@ -50,6 +53,10 @@ export class App {
     routes.forEach((route) => {
       this.app.use('/', route.router);
     });
+  }
+
+  private initializeErrorHandling() {
+    this.app.use(errorMiddleware);
   }
 
   private connectToTheDatabase() {
