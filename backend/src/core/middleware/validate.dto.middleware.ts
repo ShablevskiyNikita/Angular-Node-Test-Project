@@ -1,6 +1,6 @@
-import { RequestHandler } from 'express';
+import { validate } from 'class-validator';
 import { plainToClass } from 'class-transformer';
-import { validate, ValidationError } from 'class-validator';
+import { RequestHandler } from 'express';
 
 import { BadRequestException } from '../classes/exceptions/bad.request.exception';
 
