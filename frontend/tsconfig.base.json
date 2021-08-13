@@ -15,6 +15,32 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@assets": [
+        "src/assets/*"
+      ],
+      "@rest/*": [
+        "src/app/rest/*"
+      ],
+      "@portal/*": [
+        "src/app/containers/portal/*"
+      ],
+      "@containers/*": [
+        "src/app/containers/*"
+      ],
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
+      ],
+      "@enums/*": [
+        "src/app/enums/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ]
+    }
   }
 }
