@@ -1,1 +1,38 @@
-<p>todo-list works!</p>
+<section class="todo-list-container">
+  <header class="todo-list-container__header">
+    <h2 class="todo-list-container__header__text">
+      Todo list
+    </h2>
+  </header>
+  <div class="todo-list-container__create">
+    <form
+        #todo="ngForm"
+        class="todo-list-container__create__form">
+      <mat-form-field
+        appearance="standard"
+        class="todo-list-container__create__form__input-field"
+        [hideRequiredMarker]="true">
+        <mat-label>text</mat-label>
+        <input
+            #title="ngModel"
+            matInput
+            id="title"
+            type="text"
+            name="title"
+            required
+            minlength="1"
+            [class.error]="title.invalid && (title.dirty || title.touched)"
+            [(ngModel)]="tempTodo.title">
+        <mat-error *ngIf="title.invalid && (title.dirty || title.touched)">
+          <span *ngIf="title.errors.required">Required field</span>
+          <span *ngIf="title.errors?.minlength">At least one character required</span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="todo-list-container__list">
+    <h2 class="todo-list-container__header__text">
+      Todo list
+    </h2>
+  </div>
+</section>
