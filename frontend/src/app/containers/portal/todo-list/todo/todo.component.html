@@ -1,1 +1,7 @@
-<p>todo works!</p>
+<div class="todo">
+  <mat-checkbox [(ngModel)]="todoData.finished"></mat-checkbox>
+  <div>{{todoData.title}}</div>
+  <button  mat-icon-button aria-label="Delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>

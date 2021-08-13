@@ -21,7 +21,7 @@
             name="title"
             required
             minlength="1"
-            (keyup.enter)="createTodo(todoForm)"
+            (keyup.enter)="todoForm.valid ? createTodo(todoForm): null"
             [class.error]="title.invalid && (title.dirty || title.touched)"
             [(ngModel)]="tempTodo.title">
         <mat-error *ngIf="title.invalid && (title.dirty || title.touched)">
@@ -33,7 +33,8 @@
   </div>
   <div class="todo-list-container__list">
     <h2 class="todo-list-container__header__text">
-      Todo list
+      <app-todo *ngFor="let todo of todos" [todoData]="todo">
+      </app-todo>
     </h2>
   </div>
 </section>
