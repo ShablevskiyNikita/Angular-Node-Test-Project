@@ -5,6 +5,7 @@ import { RequestModifiedBody } from '../../core/interfaces/requests/request.modi
 
 import { UserDaoInstance } from '../users/user.dao';
 
+import { PayloadData } from '../../core/classes/payload.data';
 import { LoginUserDto } from './dto/login.dto';
 
 import { UnauthorizedException } from '../../core/classes/exceptions/unauthorized.exception';
@@ -19,9 +20,9 @@ class AuthController {
 
         const { ACCESS_TOKEN_SECRET } = process.env;
 
-        const jwtPayload = {
+        const jwtPayload = new PayloadData({
           _id: user._id
-        };
+        });
 
         response.send({
           user: result,
