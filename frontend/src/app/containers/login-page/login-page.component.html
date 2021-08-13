@@ -1,5 +1,8 @@
 <div class="login-container">
-  <h5>Login page</h5>
+  <h3
+    class="login-container__heading">
+    Login page
+  </h3>
   <form
       #loginForm="ngForm"
       class="login-page-container__form"
@@ -25,7 +28,7 @@
     </mat-form-field>
     <mat-form-field
       appearance="standard"
-      class="login-page-container__form__input-field"
+      class="login-container__form__input-field"
       [hideRequiredMarker]="true">
       <mat-label>Password</mat-label>
       <input
@@ -40,6 +43,7 @@
       </mat-error>
     </mat-form-field>
     <button
+      mat-stroked-button
       type="submit"
       class="button login-container__form__button">
       Login
