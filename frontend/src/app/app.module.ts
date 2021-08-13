@@ -20,7 +20,6 @@ import { AppComponent } from './app.component';
       timeOut: 4000,
       tapToDismiss: false,
       autoDismiss: true,
-      maxOpened: 1,
       easeTime: 500,
     }),
     AppRoutingModule,
