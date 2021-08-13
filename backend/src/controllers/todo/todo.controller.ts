@@ -14,7 +14,7 @@ class TodoController implements ICrudController {
   async create(request: RequestModifiedBody<CreateTodoDto>, response: Response, next: NextFunction) {
     try {
       const todo = await TodoDaoInstance.create(request.body);
-      
+
       response.send(todo);
     } catch (error) {
       next(new InternalErrorException('Create todo', error));

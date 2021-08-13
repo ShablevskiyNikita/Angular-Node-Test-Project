@@ -2,7 +2,7 @@ import { RequestHandler } from 'express';
 import { plainToClass } from 'class-transformer';
 import { validate, ValidationError } from 'class-validator';
 
-import { ValidationException } from '../../exceptions/ValidationException';
+import { BadRequestException } from '../classes/exceptions/bad.request.exception';
 
 export const validateDtoMiddleware = (
   type: any,
@@ -13,12 +13,12 @@ export const validateDtoMiddleware = (
       const errors = await validate(plainedClass, { skipMissingProperties });
       if (errors.length > 0) {
         const errorsMessage = errors.map((error: ValidationError) => Object.values(error.constraints)).join(', ');
-        next(new ValidationException(errorsMessage));
+        next(new BadRequestException(errorsMessage));
       } else {
         next();
       }
     } else {
-      next(new ValidationException('Expected object but received array'));
+      next(new BadRequestException('Expected object but received array'));
     }
   };
 };
