@@ -20,15 +20,17 @@ class AuthController {
 
         const { ACCESS_TOKEN_SECRET } = process.env;
 
-        const jwtPayload = new PayloadData({
+        const jwtPayload: PayloadData = {
           _id: user._id
+        };
+
+        const access_token = jsonwebtoken.sign(jwtPayload, ACCESS_TOKEN_SECRET, {
+          expiresIn: '30m'
         });
 
         response.send({
           user: result,
-          access_token: jsonwebtoken.sign(jwtPayload, ACCESS_TOKEN_SECRET, {
-            expiresIn: '30m'
-          })
+          access_token
         });
       } else {
         next(new UnauthorizedException());
