@@ -26,19 +26,19 @@ export class TodoRouter extends CommonRoute {
         TodoControllerInstance.getAll)
       .get(
         `${this.path}/:id`,
-        TodoMiddlewareInstance.checkIdValidity,
+        TodoMiddlewareInstance.checkIdValidity(),
         TodoMiddlewareInstance.checkTodoExisting,
         TodoControllerInstance.getOne)
       .put(
         `${this.path}/:id`,
-        TodoMiddlewareInstance.checkIdValidity,
+        TodoMiddlewareInstance.checkIdValidity(),
         TodoMiddlewareInstance.checkTodoExisting,
         validateDtoMiddleware(UpdateTodoDto),
         TodoMiddlewareInstance.castRequestBodyToDto(UpdateTodoDto),
         TodoControllerInstance.update)
       .delete(
         `${this.path}/:id`,
-        TodoMiddlewareInstance.checkIdValidity,
+        TodoMiddlewareInstance.checkIdValidity(),
         TodoMiddlewareInstance.checkTodoExisting,
         TodoControllerInstance.delete)
     ;
