@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { PortalRouting } from './portal.routing';
 import { PortalComponent } from './portal.component';
+import { MaterialModule } from '@core/material/material.module';
 
 @NgModule({
   declarations: [ PortalComponent ],
   imports: [
     CommonModule,
-    PortalRouting
+    PortalRouting,
+    MaterialModule
   ],
   exports: [ PortalComponent ]
 })

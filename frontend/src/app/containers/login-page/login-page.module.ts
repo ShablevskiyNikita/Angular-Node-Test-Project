@@ -3,9 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { AuthService } from '@core/auth/services/auth.service';
+import { MaterialModule } from '@core/material/material.module';
 import { LoginPageRouting } from './login-page.routing';
 import { LoginPageComponent } from './login-page.component';
-import { MaterialModule } from '@core/material/material.module';
 
 @NgModule({
   imports: [
@@ -16,6 +16,8 @@ import { MaterialModule } from '@core/material/material.module';
   ],
   declarations: [ LoginPageComponent ],
   exports: [ LoginPageComponent ],
-  providers: [ AuthService ]
+  providers: [
+    AuthService
+  ]
 })
 export class LoginPageModule {}

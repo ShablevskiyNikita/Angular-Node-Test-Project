@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
+import { AuthGuard } from '@core/auth/guards/auth.guard';
+import { LoginGuard } from '@core/auth/guards/login.guard';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +28,10 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    LoginGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
