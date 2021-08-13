@@ -1,0 +1,25 @@
+.todo-list-container {
+  width: 500px;
+  margin: 20px auto 0;
+  padding: 15px;
+
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  &__header {
+    &__text {
+
+    }
+  }
+
+  &__create {
+    &__form {
+      &__input-field {
+        width: 100%;
+      }
+    }
+  }
+
+  &__list {
+
+  }
+}

@@ -21,7 +21,8 @@ import { AppComponent } from './app.component';
       tapToDismiss: false,
       autoDismiss: true,
       maxOpened: 1,
-      easeTime: 500
+      easeTime: 500,
+      positionClass: 'toast-bottom',
     }),
     AppRoutingModule,
     BrowserAnimationsModule

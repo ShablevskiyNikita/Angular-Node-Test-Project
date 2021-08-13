@@ -17,7 +17,6 @@
           name="mail"
           required
           [pattern]="mailPattern"
-          [class.error]="mail.invalid && (mail.dirty || mail.touched)"
           [(ngModel)]="loginData.email">
       <mat-error *ngIf="mail.invalid && (mail.dirty || mail.touched)">
         <span *ngIf="mail.errors.required">Required field</span>
