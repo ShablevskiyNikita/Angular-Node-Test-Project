@@ -11,7 +11,9 @@ class UserDao {
     })
   ];
 
-  findById(id: string) {
-    return this.users.find(user => user._id === id);
+  findByEmail(email: string) {
+    return this.users.find(user => user.email === email);
   }
 }
+
+export const UserDaoInstance = new UserDao();
