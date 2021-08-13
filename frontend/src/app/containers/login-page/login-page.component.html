@@ -36,6 +36,7 @@
           matInput
           id="password"
           name="password"
+          type="password"
           required
           [(ngModel)]="loginData.password">
       <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
