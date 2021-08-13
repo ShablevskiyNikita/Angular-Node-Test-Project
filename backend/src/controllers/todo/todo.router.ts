@@ -34,7 +34,8 @@ export class TodoRouter extends CommonRoute {
         TodoMiddlewareInstance.checkIdValidity,
         TodoMiddlewareInstance.checkTodoExisting,
         validateDtoMiddleware(UpdateTodoDto),
-        TodoMiddlewareInstance.castRequestBodyToDto(UpdateTodoDto),)
+        TodoMiddlewareInstance.castRequestBodyToDto(UpdateTodoDto),
+        TodoControllerInstance.update)
       .delete(
         `${this.path}/:id`,
         TodoMiddlewareInstance.checkIdValidity,

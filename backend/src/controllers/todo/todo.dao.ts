@@ -20,7 +20,9 @@ class TodoDao {
   }
 
   updateById(id: string, todo: UpdateTodoDto): Promise<TodoModelType> {
-    return this.todoModel.findByIdAndUpdate(id, todo, { new: true });
+    return this.todoModel.findByIdAndUpdate(id, {
+      $set: todo
+    }, { new: true });
   }
 
   deleteById(id: string): Promise<TodoModelType> {

@@ -1,7 +1,26 @@
-import { CreateTodoDto } from './create.todo.dto';
+import { IsBoolean, IsNotEmpty, IsString } from 'class-validator';
 
-export class UpdateTodoDto extends CreateTodoDto{
+export class UpdateTodoDto {
+  @IsNotEmpty({
+    message: 'Require not empty title'
+  })
+  @IsString({
+    message: 'Title must be a String'
+  })
+  title: string;
+
+  @IsNotEmpty({
+    message: 'Require not empty finished'
+  })
+  @IsBoolean({
+    message: 'Finished must be Boolean'
+  })
+  finished: boolean;
+
   constructor(data?: UpdateTodoDto) {
-    super(data);
+    if(data){
+      this.title = data.title;
+      this.finished = data.finished;
+    }
   }
 }
