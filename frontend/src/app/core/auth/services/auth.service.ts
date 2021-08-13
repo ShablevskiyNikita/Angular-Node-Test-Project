@@ -11,11 +11,11 @@ export class AuthService {
 
   constructor(private http: HttpService) { }
 
-  login(data: LoginDto): Observable<AuthData>{
-    return this.http.create<AuthData>(`${this.path}/login`, data, {
+  login(data: LoginDto): Observable<AuthData> {
+    return this.http.create<AuthData>(`${this.path}/login`, data, AuthData, {
       200: 'Successfully logged in',
       400: 'Error occurred',
       401: 'User not found or password not match'
-    })
+    });
   }
 }
