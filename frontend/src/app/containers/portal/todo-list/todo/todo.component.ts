@@ -9,8 +9,13 @@ import { TodoDto } from '@rest/todo/todo.dto';
 export class TodoComponent {
   @Input() todoData: TodoDto;
   @Output() todoDataChange = new EventEmitter<TodoDto>();
+  @Output() deleteData = new EventEmitter<TodoDto>();
 
   updateTodo(): void {
     this.todoDataChange.emit(this.todoData);
+  }
+
+  deleteTodo(): void {
+    this.deleteData.emit(this.todoData);
   }
 }

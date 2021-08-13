@@ -9,7 +9,10 @@
   <div>
     {{todoData.create_date | date: 'short'}}
   </div>
-  <button mat-icon-button aria-label="Delete icon">
+  <button
+    mat-icon-button
+    aria-label="Delete icon"
+    (click)="deleteTodo()">
     <mat-icon>delete</mat-icon>
   </button>
 </div>
