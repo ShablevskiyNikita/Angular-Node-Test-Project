@@ -17,7 +17,7 @@ class TodoController implements ICrudController {
 
       response.send(todo);
     } catch (error) {
-      next(new InternalErrorException('Create todo', error));
+      next(new InternalErrorException());
     }
   }
 
@@ -28,7 +28,7 @@ class TodoController implements ICrudController {
 
       response.send(todo);
     } catch (error) {
-      next(new InternalErrorException('Getting todo', error));
+      next(new InternalErrorException());
     }
   }
 
@@ -38,7 +38,7 @@ class TodoController implements ICrudController {
 
       response.send(todos);
     } catch (error) {
-      next(new InternalErrorException('Getting todos', error));
+      next(new InternalErrorException());
     }
   }
 
@@ -49,7 +49,7 @@ class TodoController implements ICrudController {
 
       response.send(todo);
     } catch (error) {
-      next(new InternalErrorException('Updating todo', error));
+      next(new InternalErrorException());
     }
   }
 
@@ -63,7 +63,7 @@ class TodoController implements ICrudController {
         message: 'Successfully deleted'
       });
     } catch (error) {
-      next(new InternalErrorException('Deleting todo', error));
+      next(new InternalErrorException());
     }
   }
 

@@ -12,13 +12,12 @@ export const validateDtoMiddleware = (
       const plainedClass = plainToClass(type, request.body);
       const errors = await validate(plainedClass, { skipMissingProperties });
       if (errors.length > 0) {
-        const errorsMessage = errors.map((error: ValidationError) => Object.values(error.constraints)).join(', ');
-        next(new BadRequestException(errorsMessage));
+        next(new BadRequestException());
       } else {
         next();
       }
     } else {
-      next(new BadRequestException('Expected object but received array'));
+      next(new BadRequestException());
     }
   };
 };
