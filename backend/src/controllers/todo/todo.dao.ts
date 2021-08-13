@@ -1,10 +1,13 @@
 import { TodoModel } from './model/todo.model';
 import { TodoModelType } from './model/todo.model.type';
 
+import { CreateTodoDto } from './dto/create.todo.dto';
+import { UpdateTodoDto } from './dto/update.todo.dto';
+
 class TodoDao {
   private todoModel = TodoModel;
 
-  create(todo): Promise<TodoModelType> {
+  create(todo: CreateTodoDto): Promise<TodoModelType> {
     return this.todoModel.create(todo);
   }
 
@@ -16,7 +19,7 @@ class TodoDao {
     return this.todoModel.findById(id);
   }
 
-  updateById(id: string, todo): Promise<TodoModelType> {
+  updateById(id: string, todo: UpdateTodoDto): Promise<TodoModelType> {
     return this.todoModel.findByIdAndUpdate(id, todo, { new: true });
   }
 
