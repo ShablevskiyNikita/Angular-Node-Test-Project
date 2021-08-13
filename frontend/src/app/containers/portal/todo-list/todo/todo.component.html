@@ -7,7 +7,8 @@
     <div
       *ngIf="!editTitle"
       class="todo__title__text"
-         (click)="showInput()">
+      (click)="showInput()"
+      [class.finished]="todoData.finished">
       {{todoData.title}}
     </div>
     <div

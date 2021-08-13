@@ -6,10 +6,11 @@
   &__title {
     &__text {
       cursor: pointer;
-    }
 
-    &__input {
-
+      &.finished {
+        color: green;
+        text-decoration: line-through;
+      }
     }
   }
 }
