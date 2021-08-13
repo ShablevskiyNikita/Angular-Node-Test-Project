@@ -43,7 +43,7 @@ export class TodoListComponent implements OnInit {
 
   deleteTodo(todo: TodoDto): void {
     this.todoService.deleteDto(todo)
-      .subscribe(deletedToDo => {
+      .subscribe(() => {
         this.todos = this.todos.filter(item => item._id !== todo._id);
       });
   }

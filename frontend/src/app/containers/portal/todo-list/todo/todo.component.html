@@ -1,6 +1,6 @@
 <div class="todo">
   <mat-checkbox
-    (ngModelChange)="updateTodo()"
+    (change)="updateTodo()"
     [(ngModel)]="todoData.finished">
   </mat-checkbox>
   <div>
