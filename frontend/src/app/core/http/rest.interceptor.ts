@@ -19,19 +19,10 @@ export class RestInterceptor implements HttpInterceptor {
     private storageService: StorageService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    if (this.routeRequireToken()) {
-      return next.handle(this.getChangedRequest(request));
-    } else {
-      return next.handle(request);
-    }
+    return next.handle(this.getChangedRequest(request));
   }
 
-  private routeRequireToken(): boolean {
-    const test = this.router.url.includes('login');
-    return !test;
-  }
-
-  private getChangedRequest(request): HttpRequest<any> {
+  private getChangedRequest(request: HttpRequest<unknown>): HttpRequest<any> {
     const token = this.storageService.getTokenFromStorage() || 'empty token';
     return request.clone(this.getRequestParams(request, token));
   }
