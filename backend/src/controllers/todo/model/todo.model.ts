@@ -24,4 +24,4 @@ const TodoSchema = new Schema(
   }
 );
 
-export const DeliveryModel = model<TodoModelType>('Todos', TodoSchema, 'Todos');
+export const TodoModel = model<TodoModelType>('Todos', TodoSchema, 'Todos');
