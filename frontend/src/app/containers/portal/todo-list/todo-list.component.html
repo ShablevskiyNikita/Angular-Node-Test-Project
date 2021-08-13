@@ -19,11 +19,14 @@
       </mat-form-field>
     </form>
   </div>
-  <div class="todo-list-container__list">
+  <div *ngIf="todos.length > 0" class="todo-list-container__list">
     <app-todo *ngFor="let todo of todos"
               (deleteData)="deleteTodo($event)"
               (todoDataChange)="updateTodo($event)"
               [todoData]="todo">
     </app-todo>
+  </div>
+  <div *ngIf="todos.length ===  0" class="todo-list-container__empty-list">
+    You dont have any todos
   </div>
 </section>
