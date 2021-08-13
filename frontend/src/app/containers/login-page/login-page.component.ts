@@ -24,7 +24,7 @@ export class LoginPageComponent {
   loginToAdminPage(): void {
     this.authService.login(this.loginData)
       .subscribe(authData => {
-        this.storageService.setTokenToStorage(authData.accessToken);
+        this.storageService.setTokenToStorage(authData.access_token);
         this.router.navigateByUrl('/');
       });
   }
