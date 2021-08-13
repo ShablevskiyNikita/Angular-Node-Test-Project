@@ -26,7 +26,7 @@ class AuthController {
         response.send({
           user: result,
           access_token: jsonwebtoken.sign(jwtPayload, ACCESS_TOKEN_SECRET, {
-            expiresIn: '20m'
+            expiresIn: '30m'
           })
         });
       } else {
@@ -37,3 +37,5 @@ class AuthController {
     }
   };
 }
+
+export const AuthControllerInstance = new AuthController();
