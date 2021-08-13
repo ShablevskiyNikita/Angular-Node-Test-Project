@@ -11,11 +11,11 @@ class UserDao {
     })
   ];
 
-  findByEmail(email: string) {
+  findByEmail(email: string): UserDto {
     return this.users.find(user => user.email === email);
   }
 
-  findById(id: string) {
+  findById(id: string): UserDto {
     return this.users.find(user => user._id === id);
   }
 }

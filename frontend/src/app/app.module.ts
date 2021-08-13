@@ -23,7 +23,7 @@ import { LoginGuard } from '@core/auth/guards/login.guard';
       timeOut: 4000,
       tapToDismiss: false,
       autoDismiss: true,
-      easeTime: 500,
+      easeTime: 500
     }),
     AppRoutingModule,
     BrowserAnimationsModule
