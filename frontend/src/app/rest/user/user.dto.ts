@@ -7,6 +7,7 @@ export class UserDto {
 
   constructor(data?: UserDto) {
     if (data) {
+      this._id = data._id;
       this.firstname = data.firstname;
       this.lastname = data.lastname;
       this.email = data.email;
