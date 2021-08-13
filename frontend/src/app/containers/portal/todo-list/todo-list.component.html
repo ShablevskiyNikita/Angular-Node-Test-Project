@@ -6,7 +6,7 @@
   </header>
   <div class="todo-list-container__create">
     <form
-        #todo="ngForm"
+        #todoForm="ngForm"
         class="todo-list-container__create__form">
       <mat-form-field
         appearance="standard"
@@ -21,6 +21,7 @@
             name="title"
             required
             minlength="1"
+            (keyup.enter)="createTodo(todoForm)"
             [class.error]="title.invalid && (title.dirty || title.touched)"
             [(ngModel)]="tempTodo.title">
         <mat-error *ngIf="title.invalid && (title.dirty || title.touched)">
