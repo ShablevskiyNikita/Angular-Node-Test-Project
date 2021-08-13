@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e626d78c-612f-4366-b2c8-b3de21c3c4c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/controllers/todo/dto/create.todo.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/controllers/todo/dto/update.todo.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/core/classes/exceptions/internal.error.exception.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/todo/todo.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/todo/todo.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/core/classes/exceptions/bad-request-exception.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/core/classes/exceptions/bad.request.exception.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/core/classes/exceptions/http-exception.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/core/classes/exceptions/http.exception.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +32,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/core/middleware" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\src\core\middleware" />
+      <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\src\core\interfaces\requests" />
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\common" />
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo" />
     </key>
@@ -73,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628834783645</updated>
-      <workItem from="1628834784861" duration="2272000" />
+      <workItem from="1628834784861" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="Created base backend setup">
       <created>1628835692834</created>
@@ -103,7 +107,28 @@
       <option name="project" value="LOCAL" />
       <updated>1628836770488</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Created dto for validation">
+      <created>1628837093510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1628837093510</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added modified request interface">
+      <created>1628837157734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1628837157734</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added validation middleware, common exceptions">
+      <created>1628837369758</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628837369758</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +151,9 @@
     <MESSAGE value="Created todo route structure, model schema and types" />
     <MESSAGE value="Ginignore to the root level" />
     <MESSAGE value="Created dao crud method without DTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created dao crud method without DTO" />
+    <MESSAGE value="Created dto for validation" />
+    <MESSAGE value="Added modified request interface" />
+    <MESSAGE value="Added validation middleware, common exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation middleware, common exceptions" />
   </component>
 </project>
