@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e626d78c-612f-4366-b2c8-b3de21c3c4c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/todo/model/todo.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/todo/model/todo.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/controllers/todo/todo.dao.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/controllers/todo/todo.dao.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/controllers/todo/dto/create.todo.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/controllers/todo/dto/update.todo.dto.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,7 @@
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FRONT_END\testing-projects\angular-node-todo" />
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\src\core\classes" />
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\src\core\interfaces" />
       <recent name="D:\FRONT_END\testing-projects\angular-node-todo\backend\src" />
@@ -73,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628834783645</updated>
-      <workItem from="1628834784861" duration="1759000" />
+      <workItem from="1628834784861" duration="2272000" />
     </task>
     <task id="LOCAL-00001" summary="Created base backend setup">
       <created>1628835692834</created>
@@ -96,16 +96,36 @@
       <option name="project" value="LOCAL" />
       <updated>1628836530066</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created dao crud method without DTO">
+      <created>1628836770488</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628836770488</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created base backend setup" />
     <MESSAGE value="Reinstalled ts-node dependency" />
     <MESSAGE value="Created todo route structure, model schema and types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created todo route structure, model schema and types" />
+    <MESSAGE value="Ginignore to the root level" />
+    <MESSAGE value="Created dao crud method without DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created dao crud method without DTO" />
   </component>
 </project>
